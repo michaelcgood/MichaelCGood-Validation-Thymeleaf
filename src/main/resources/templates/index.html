@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- CSS INCLUDE -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous"></link>
+
+<!-- EOF CSS INCLUDE -->
+</head>
+<body>
+
+	<!-- START PAGE CONTAINER -->
+	<div class="container-fluid">
+		<!-- PAGE TITLE -->
+		<div class="page-title">
+			<h2>
+				 Request University Info
+			</h2>
+		</div>
+		<!-- END PAGE TITLE -->
+		<div class="column">
+			<form action="#" th:action="@{/}" th:object="${student}"
+				method="post">
+				<table>
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" th:field="*{name}"></input></td>
+						<td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name
+							Error</td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" th:field="*{email}"></input></td>
+						<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email
+							Error</td>
+					</tr>
+					<tr>
+						<td>Comments:</td>
+						<td><input type="text" th:field="*{comments}"></input></td>
+					</tr>
+					<tr>
+						<td>Open House:</td>
+						<td><input type="checkbox" th:field="*{openhouse}"></input></td>
+				
+					</tr>
+					<tr>
+						<td>Subscribe to updates:</td>
+						<td><input type="checkbox" th:field="*{subscribe}"></input></td>
+				
+					</tr>
+					<tr>
+						<td>
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+
+		</div>
+		<!-- END PAGE CONTAINER -->
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"
+		integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+		crossorigin="anonymous"></script>
+
+
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
